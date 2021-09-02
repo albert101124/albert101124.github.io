@@ -1,4 +1,8 @@
 /* Your CSS here. */
+html {
+    scroll-behavior: smooth;
+}
+
 .navigation_bar {
     background-color: #D4D6D5;
     height: 80px;
@@ -46,9 +50,8 @@ nav a:hover {
 
 .hero_text {
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
     color: blanchedalmond;
-    padding-top: 250px;
+    padding-top: 220px;
 }
 
 .social_media_link {
@@ -59,13 +62,22 @@ nav a:hover {
 
 .social_media_link__icon {
     text-align: center;
+    font-size: 30px;
+    color: blanchedalmond;
     margin-right: 30px;
+}
+
+.social_media_link__icon:last-child {
+    text-align: center;
+    font-size: 30px;
+    color: blanchedalmond;
+    margin-right: 0px;
 }
 
 .intro_section {
     background-color: #EEE9E3;
     text-align: center;
-    padding: 50px 100px;
+    padding: 50px 10%;
 }
 
 .intro_section__bio {
@@ -75,7 +87,7 @@ nav a:hover {
 .skills_section {
     background-color: white;
     text-align: center;
-    padding: 50px 100px;
+    padding: 50px 10%;
 }
 
 .skills_section__skill-set {
@@ -92,7 +104,7 @@ nav a:hover {
 .work_experience_section {
     background-color: #EEE9E3;
     text-align: center;
-    padding: 50px 100px;
+    padding: 50px 10%;
 }
 
 .work_experience_section__timeline {
@@ -176,12 +188,11 @@ nav a:hover {
 .work_experience_section__content {
     text-align: left;
     padding: 20px 30px;
+    min-width: 300px;
     background-color: white;
     position: relative;
     border-radius: 6px;
 }
-  
-
 
 .work_experience_section__position {
     text-align: left;
@@ -189,7 +200,7 @@ nav a:hover {
 
 .contact_info_section {
     background-color: #D4D6D5;
-    padding: 50px 100px;
+    padding: 50px 10%;
     text-align: center;
 }
 
@@ -197,12 +208,16 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     flex-direction: row;
+    justify-items: center;
 }
 
 .contact_info_section__selfie_frame {
-    width: 320px;
-    height: 240px;
+    width: 360px;
+    height: 270px;
+    min-width: 200px;
+    min-height: 150px;
     display: block;
+    padding-right: 16px;
 }
 
 .contact_info_section__selfie {
@@ -211,8 +226,9 @@ nav a:hover {
 }
 
 .contact_info_section__contacts {
-    width: 100%;
+    width: 80%;
     flex-direction: column;
+    padding-left: 16px;
 }
 
 .contact_info_section__links {
