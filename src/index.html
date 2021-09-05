@@ -13,12 +13,10 @@
 <body>
     <div class='intro_page__container' id='container'>
         <nav class='navigation_bar'>
-            <ul class='navigation_bar__icon-list'>
-                <li class='navigation_bar__icon'>
-                    <a href="#">
-                        <i class="fas fa-band-aid"></i>
-                    </a>
-                </li>
+            <a href="#" class='navigation_bar__logo' onclick="expandHamburgerList()">
+                <i class="fas fa-band-aid"></i>
+            </a>
+            <ul class='navigation_bar__icon-list' onclick="expandHamburgerList()">
                 <li class='navigation_bar__icon'>
                     <a href='#intro'>ABOUT</a>
                 </li>
@@ -32,6 +30,7 @@
                     <a href='#contact'>CONTACT</a>
                 </li>
             </ul>
+            <a class='navigation_bar__hamburger_list' onclick="expandHamburgerList()"><i class="fa fa-bars"></i></a>
         </nav>
         <div class='hero_section' id="hero">
             <div class='hero_text'>
@@ -50,12 +49,35 @@
         <div class='intro_section' id="intro">
             <h1>Learn More About Me!</h1>
             <div class='intro_section__bio'>
-                <p><br><p>
-                <p>My name is <b>Jung-Cheng (Albert) Ho</b>. I am currently studying in ECE master at UIUC. Before joining UIUC, I have 1.5 year of professional software engineering experience. </p>
-                <p>In April 2020, I joined Micro-System Research Lab at Nation Taiwan University as a <b>Full-time Research Assistant</b>. </p>
-                <p>Starting from Feburary 2021, I joined <b>Houzz Inc.</b> as a <b>Full-time Full-stack Software Engineer</b>. I worked remotely with team located in Palo Alto, CA</p>
-                <p>I love playing soccer during my free time. I joined the departmental soccer team during all four years of my college time. Also, I served as the <b>Team Captain</b> in my junior year.</p>
-                <p>I am now looking for 2022 summer SDE intern opportunity.</p>
+                <p>My name is <b>Jung-Cheng (Albert) Ho</b>. I have 1.5 year of professional software engineering experience, 
+                    including experiences in web programming and machine learning.
+                </p>
+                <p>In April 2020, I joined Micro-System Research Lab at Nation Taiwan University as a <b>Full-time Research Assistant</b>. 
+                    During my time as a research assistant, I was working writing a C program that enabled our lab's 
+                    machine learning accelerating chip to complete the training process. Since the chip can only accelerate 
+                    convolution computations, when it comes to other computations like pooling layer and activation functions, 
+                    it will need the help from software program. Also, there exist size limitations for convolution computation. 
+                    Therefore, my program will also help to partition the images into smaller ones. I implemented data reuse method 
+                    and fused operations to <b>reduce the time consumptions by 100 times</b>. The software + accelerator method achieved 
+                    the same accuracy (>99%) as that trained by GPU.
+                 </p>
+                <p>Starting from Feburary 2021, I joined <b>Houzz Inc.</b> as a <b>Full-time Full-stack Software Engineer</b>. 
+                    I worked remotely with the team located in Palo Alto, California. At Houzz, I was familiar with 
+                    <b>Frontend Development</b>, including <b>React.js, JavaScript, HTML, and CSS</b>. 
+                    I implemented several changes on home page, including photo carousel, feature lists, and the modification of system 
+                    message destination. The result of A/B tests shows that the sign-up rate increased significantly. 
+                    I also worked on a project to migrate and refactor the pricing data retrieval from hard-coded configurations into 
+                    backend support with <b>GraphQL</b> query. In this project I have the chance to deal with <b>PHP</b> backend 
+                    and the design of the systems.  
+                </p>
+                <p>I love playing soccer during my free time. I joined the departmental soccer team during all four years of my 
+                    college time. Also, I served as the <b>Team Captain</b> in my junior year. During that year, I worked on recruiting 
+                    new members, and also held team activities to let our team member closer to each other. The chemistry of the team 
+                    was so great and we finally won two championship, including National EE soccer cup champion.
+                </p>
+                <p>I am currently studying in ECE master at <b>University of Illinois at Urbana-Champaign</b>, and planning to graduate by December 2022. 
+                    I am now looking for <b>2022 summer SDE intern</b> opportunities.
+                </p>
             </div>
         </div>
         <div class='skills_section' id='skill'>
@@ -158,6 +180,16 @@
         </div>
     </div> 
     <script src="bundle.js" type="text/javascript"></script>
+    <script>
+        function expandHamburgerList() {
+            var listContent = document.getElementsByClassName("navigation_bar__icon-list")[0];
+            if (listContent.style.display === "flex") {
+                listContent.style.display = "none";
+            } else {
+                listContent.style.display = "flex";
+            }
+        }
+    </script>
 </body>
 
 </html>

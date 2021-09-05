@@ -3,14 +3,29 @@ html {
     scroll-behavior: smooth;
 }
 
+.intro_page__container {
+    display: block;
+    margin: 0;
+}
+
 .navigation_bar {
     background-color: #D4D6D5;
     height: 80px;
     display: flex;
+    position: sticky;
+    top: 0px;
     align-items: center;
+    z-index: 2;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.navigation_bar__logo {
+    display: flex;
 }
 
 .navigation_bar__icon-list {
+    display: flex;
     flex-direction: row;
     align-items: center;
     height: auto;
@@ -21,10 +36,18 @@ html {
 }
 
 .navigation_bar__icon {
+    display: flex;
     text-align: center;
     height: 100%;
     width: auto;
     float: left;
+}
+
+.navigation_bar__hamburger_list {
+    display: none;
+    text-align: center;
+    height: 100%;
+    width: auto;
 }
 
 nav a {
@@ -38,10 +61,6 @@ nav a {
 nav a:hover {
     background-color: #D4D6D5;
     color: white;
-}
-
-.navigation_bar__icon-list {
-    flex-direction: row;
 }
 
 .hero_section {
@@ -80,7 +99,7 @@ nav a:hover {
 .intro_section {
     background-color: #EEE9E3;
     text-align: center;
-    padding: 50px 10%;
+    padding: 80px 10%;
 }
 
 .intro_section__bio {
@@ -90,7 +109,7 @@ nav a:hover {
 .skills_section {
     background-color: white;
     text-align: center;
-    padding: 50px 10%;
+    padding: 80px 10%;
 }
 
 .skills_section__skill-set {
@@ -107,7 +126,7 @@ nav a:hover {
 .work_experience_section {
     background-color: #EEE9E3;
     text-align: center;
-    padding: 50px 10%;
+    padding: 80px 10%;
 }
 
 .work_experience_section__timeline {
@@ -203,7 +222,7 @@ nav a:hover {
 
 .contact_info_section {
     background-color: #D4D6D5;
-    padding: 50px 10%;
+    padding: 80px 10%;
     text-align: center;
 }
 
@@ -327,6 +346,63 @@ nav a:hover {
     }
 }
 
+@media screen and (max-width: 700px) {
+    .navigation_bar__logo {
+        display: flex;
+        padding: 30.5px 10px;
+    }
+
+    .navigation_bar {
+        background-color: #D4D6D5;
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .navigation_bar__icon-list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        margin-top: 60px;
+    }
+    
+    .navigation_bar__icon {
+        display: flex;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        float: left;
+    }
+    
+    nav a {
+        color: inherit;
+        display: block;
+        font-size: 1.2rem;
+        padding: 10px;
+        text-decoration: none;
+    }
+    
+    nav a:hover {
+        background-color: #D4D6D5;
+        color: white;
+    }
+
+    .navigation_bar__hamburger_list {
+        display: block;
+        text-align: right;
+        height: 100%;
+        width: auto;
+        padding: 30.5px 10px;
+    }
+}
+
 @media screen and (max-width: 500px) {
     /* Place the timelime to the left */
     .work_experience_section__timeline::after {
@@ -344,5 +420,20 @@ nav a:hover {
 
     .work_experience_section__left {
         left: -46px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .intro_section__bio {
+        font-size: 14px;
+    }
+
+    .contact_info_section__selfie_frame {
+        width: 280px;
+        height: 210px;
+        min-width: 200px;
+        min-height: 150px;
+        margin: 0 auto;
+        padding-right: 0px;
     }
 }
