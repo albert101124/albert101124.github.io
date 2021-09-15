@@ -13,10 +13,10 @@
 <body>
     <div class='intro_page__container' id='container'>
         <nav class='navigation_bar'>
-            <a href="#" class='navigation_bar__logo' onclick="expandHamburgerList()">
+            <a href="#" class='navigation_bar__logo' onclick="showNavBar()">
                 <i class="fas fa-band-aid"></i>
             </a>
-            <ul class='navigation_bar__icon-list' onclick="expandHamburgerList()">
+            <ul class='navigation_bar__icon-list' onclick="showNavBar()">
                 <li class='navigation_bar__icon'>
                     <a href='#intro'>ABOUT</a>
                 </li>
@@ -188,6 +188,17 @@
             } else {
                 listContent.style.display = "flex";
             }
+        }
+        function showNavBar() {
+            var listContent = document.getElementsByClassName("navigation_bar__icon-list")[0];
+            var hamburger_list_icon = document.getElementsByClassName("navigation_bar__hamburger_list")[0];
+            if (hamburger_list_icon.style.display === "none") {
+                listContent.style.display = "flex";
+            }
+            else {
+                listContent.style.display = "none";
+            }
+            listContent.style.display = "flex";
         }
     </script>
 </body>
